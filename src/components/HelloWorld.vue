@@ -1,19 +1,20 @@
 <template>
-  <h1>{{ msg }}</h1>
-  <button @click="count++">count is: {{ count }}</button>
-  <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p>
+  <Composition></Composition>
+  <!-- Teleport:ModelButton -->
+  <ModelButton></ModelButton>
 </template>
 
 <script>
+import {} from "vue";
+
+import Composition from "./Composition.vue";
+import ModelButton from "./ModelButton.vue";
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  name: "HelloWorld",
+  components: {
+    Composition,
+    ModelButton
   },
-  data() {
-    return {
-      count: 0
-    }
-  }
-}
+};
 </script>
