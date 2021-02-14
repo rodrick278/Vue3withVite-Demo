@@ -20,12 +20,12 @@ import {
 
 export default {
   name: "Composition",
-  setup() {
+  setup() { 
     /**
      * counter 相关逻辑
      */
     // 下面写法一样
-    // 写法一 reactive：
+    // 写法一 reactive：reactive 是用来把引用类型（数组，对象等）做响应式的
     // ============================================
     // const data = reactive({
     //   // data
@@ -37,7 +37,7 @@ export default {
     // let { counter, doubleCounter } = toRefs(data);
     // ===========================================
 
-    // 写法二 ref：
+    // 写法二 ref：是把值类型做响应式的
     // ===========================================
     let counter = ref(1);
     let doubleCounter = computed(() => counter.value * 2);
